@@ -1,0 +1,548 @@
+<!DOCTYPE html><html lang="en" style=""><head>  
+<meta charset="utf-8">  
+<meta content="width=device-width, initial-scale=1.0" name="viewport">  
+<title>Amir &amp; Luis Sliding Doors | Professional Track &amp; Roller Repair</title>  
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>  
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">  
+<script id="tailwind-config">  
+      tailwind.config = {  
+        darkMode: "class",  
+        theme: {  
+          extend: {  
+            "colors": {  
+                "outline": "#707882",  
+                "on-tertiary-container": "#fff7f3",  
+                "secondary-fixed-dim": "#e9c400",  
+                "on-error-container": "#93000a",  
+                "primary-fixed": "#d0e4ff",  
+                "tertiary-container": "#af5c00",  
+                "primary-fixed-dim": "#9ccaff",  
+                "inverse-primary": "#9ccaff",  
+                "on-primary-container": "#f6f8ff",  
+                "on-primary": "#ffffff",  
+                "on-tertiary-fixed-variant": "#6f3800",  
+                "on-surface-variant": "#404751",  
+                "surface-container-high": "#ebe7e7",  
+                "on-primary-fixed-variant": "#00497a",  
+                "on-tertiary": "#ffffff",  
+                "surface-tint": "#0062a0",  
+                "on-error": "#ffffff",  
+                "secondary-container": "#fcd400",  
+                "surface-container-lowest": "#ffffff",  
+                "surface-variant": "#e5e2e1",  
+                "on-secondary-container": "#6e5c00",  
+                "inverse-on-surface": "#f3f0ef",  
+                "on-background": "#1c1b1b",  
+                "outline-variant": "#c0c7d3",  
+                "on-secondary-fixed": "#221b00",  
+                "surface-container": "#f0edec",  
+                "inverse-surface": "#313030",  
+                "error": "#ba1a1a",  
+                "secondary-fixed": "#ffe16d",  
+                "on-secondary-fixed-variant": "#544600",  
+                "background": "#fcf9f8",  
+                "surface-container-highest": "#e5e2e1",  
+                "error-container": "#ffdad6",  
+                "tertiary-fixed": "#ffdcc4",  
+                "tertiary-fixed-dim": "#ffb780",  
+                "on-surface": "#1c1b1b",  
+                "primary": "#005d98",  
+                "surface-dim": "#dcd9d9",  
+                "on-primary-fixed": "#001d35",  
+                "surface-bright": "#fcf9f8",  
+                "tertiary": "#8b4800",  
+                "secondary": "#705d00",  
+                "surface-container-low": "#f6f3f2",  
+                "surface": "#fcf9f8",  
+                "on-secondary": "#ffffff",  
+                "primary-container": "#0076c0",  
+                "on-tertiary-fixed": "#2f1400"  
+            },  
+            "borderRadius": {  
+                    "DEFAULT": "0.125rem",  
+                    "lg": "0.25rem",  
+                    "xl": "0.5rem",  
+                    "full": "0.75rem"  
+            },  
+            "spacing": {  
+                    "unit": "4px",  
+                    "margin-mobile": "20px",  
+                    "container-max": "1280px",  
+                    "margin-desktop": "64px",  
+                    "gutter": "24px"  
+            },  
+            "fontFamily": {  
+                    "body-md": ["Public Sans"],  
+                    "label-md": ["Public Sans"],  
+                    "headline-lg": ["Public Sans"],  
+                    "label-lg": ["Public Sans"],  
+                    "headline-md": ["Public Sans"],  
+                    "body-sm": ["Public Sans"],  
+                    "body-lg": ["Public Sans"],  
+                    "headline-lg-mobile": ["Public Sans"],  
+                    "display-lg": ["Public Sans"],  
+                    "display-lg-mobile": ["Public Sans"]  
+            },  
+            "fontSize": {  
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],  
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700"}],  
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],  
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],  
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],  
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],  
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],  
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}],  
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],  
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}]  
+            }  
+          },  
+        },  
+      }  
+    </script>  
+<style>  
+        body {  
+            font-family: 'Public Sans', sans-serif;  
+            color: #1c1b1b;  
+            background-color: #ffffff;  
+            line-height: 1.6;  
+        }  
+  
+        .page-section {  
+            display: none;  
+        }  
+  
+        .page-section.active-section {  
+            display: block;  
+            animation: fadeIn 0.3s ease-in-out;  
+        }  
+  
+        @keyframes fadeIn {  
+            from { opacity: 0; }  
+            to { opacity: 1; }  
+        }  
+  
+        .material-symbols-outlined {  
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;  
+        }  
+    </style>  
+</head>  
+<body class="flex flex-col min-h-screen">  
+<!-- Header -->  
+<header class="bg-surface sticky top-0 border-b border-outline-variant z-40 shadow-sm">  
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">  
+<a class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')"><img alt="Amir &amp; Luis Sliding Doors" class="w-auto object-contain h-12" src="https://lh3.googleusercontent.com/aida/ADBb0ug3KzTebD9sTSQLbyNTVP1DshwQCsUDLneibx2PLGbVipEz5VGO1aPQ6yDqRQtYIdZc4nF-3UsfGd_Ayi8gUPG3Kcwq-uuaOBk3K-fRQxxM8njTKTnXg19sXD_hRC7Hd-q_VIMqMbTCzKLl3li97L0sjoQskS1fpcF7T9olC8Ct-vzAgNH5n7UHveLKWx_TB52DHJTmtbJqqB5uK_NT7ORCVU6uGP_k_T1kO3cEIuXj1OOh6zl9x8nvYKo"><span class="font-headline-md text-primary hidden sm:block">Amir &amp; Luis Sliding Doors</span></a>  
+<nav class="hidden md:flex gap-8 items-center">  
+<a class="cursor-pointer font-label-lg transition-colors active text-primary" id="nav-home" onclick="navigateTo('home')">Home</a>  
+<a class="cursor-pointer font-label-lg hover:text-primary transition-colors text-on-surface-variant" id="nav-services" onclick="navigateTo('services')">Services</a>  
+<a class="cursor-pointer font-label-lg hover:text-primary transition-colors text-on-surface-variant" id="nav-reviews" onclick="navigateTo('reviews')">Reviews</a>  
+<a class="cursor-pointer font-label-lg hover:text-primary transition-colors text-on-surface-variant" id="nav-contact" onclick="navigateTo('contact')">Contact</a>  
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-lg hover:bg-opacity-90 transition-all flex items-center gap-2 shadow-md" href="tel:+17862341944">  
+<span class="material-symbols-outlined text-lg">call</span>  
+                    (786) 234-1944  
+                </a>  
+</nav>  
+</div>  
+</header>  
+<!-- MAIN HOME PAGE VIEW -->  
+<main class="page-section flex-grow active-section" id="page-home">  
+<!-- Hero Section -->  
+<section class="relative bg-surface text-on-primary py-24 md:py-32 text-center" style="background: linear-gradient(rgba(20,20,20,0.85), rgba(20,20,20,0.85)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCl5UffUWR9do7sxdNnsmQ6_sfBZhGweg6emiUfFFru4CyLZqw36bb0b-tJy7tcgtckUcc3WJlx5qvfta9iaGf4VNu8DPYJTnPhrL9c3zrODwUXLozoTvKIc2NP_5UgqoflJ1I1anhQgin_5a9pBnI-2jJHVt2aFnwdnMtD3SQBfvCElPHEPMEii5WEoCTMo3dn5DCTqKp7AORDmRMMP6i1oj9Ncn7hCxqUB2M3KQAJhjk3gpP3ER6BA-TSJqGsxMwDHAsb4VLzPyg') no-repeat center center/cover;">  
+<div class="max-w-4xl mx-auto px-margin-mobile">  
+<h1 class="font-display-lg text-white mb-6 leading-tight font-black text-5xl md:text-7xl">Don't Replace Your Stuck Sliding Door. Repair It For Less.</h1>  
+<p class="font-body-lg text-gray-300 mb-8 font-medium text-xl">  
+                    Professional residential sliding door, window and screen services operating directly out of Cutler Bay, Florida.  
+                </p>  
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">  
+<button class="w-full sm:w-auto bg-primary text-on-primary px-8 py-4 rounded-full font-label-lg hover:bg-secondary hover:text-on-secondary transition-colors shadow-lg text-center" onclick="navigateTo('contact')">  
+                        Schedule Free Estimate  
+                    </button>  
+<a class="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-full font-label-lg hover:bg-white hover:text-on-surface transition-colors text-center" href="tel:+17862341944">  
+                        Call (786) 234-1944  
+                    </a>  
+</div>  
+</div>  
+</section>  
+<!-- Trust Bar Section -->  
+<section class="py-8 bg-surface-variant border-y border-outline-variant">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-wrap justify-center gap-8">  
+<span class="text-on-surface font-label-md uppercase tracking-wider block font-bold flex items-center gap-2 text-lg">  
+<span class="material-symbols-outlined text-primary text-2xl">verified_user</span>eight year Family business</span>  
+<span class="text-on-surface font-label-md uppercase tracking-wider block font-bold flex items-center gap-2 text-lg">  
+<span class="material-symbols-outlined text-primary text-2xl">thumb_up</span> Satisfaction Guaranteed  
+                </span>  
+</div>  
+</section>  
+<!-- Value Strip -->  
+<section class="py-16 bg-surface border-b border-outline-variant">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">  
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">  
+<div class="bg-surface p-8 rounded-2xl shadow-sm border border-outline-variant">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Same-Day Response</h3>  
+<p class="font-body-md text-on-surface-variant font-medium">We arrive with fully stocked utility vehicles carrying a comprehensive inventory of standard rollers and tracking assets.</p>  
+</div>  
+<div class="p-8 rounded-2xl shadow-sm border border-outline-variant bg-surface border-2 border-secondary">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Honest Upfront Pricing</h3>  
+<p class="font-body-md text-on-surface-variant font-medium">No hidden surprise fees. We match our exact written project quotes to ensure transparent client realtions.</p>  
+</div>  
+<div class="bg-surface p-8 rounded-2xl shadow-sm border border-outline-variant">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Specialized Focus</h3>  
+<p class="font-body-md text-on-surface-variant font-medium">We do one thing perfectly. By focusing strictly on repiars rather than full door replacements, we save you money.</p>  
+</div>  
+</div>  
+</div>  
+</section>  
+<!-- Simple 3-Step Process Section -->  
+<section class="py-20 bg-surface-container-low">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">  
+<div class="text-center max-w-2xl mx-auto mb-16">  
+<span class="text-primary font-label-md uppercase tracking-wider mb-3 block font-bold">How It Works</span>  
+<h2 class="font-headline-lg text-on-surface mb-4 font-black text-4xl md:text-5xl">Our Simple 3-Step Process</h2>  
+</div>  
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">  
+<div class="text-center bg-surface p-8 rounded-xl border border-outline-variant shadow-sm">  
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Setting the Appointment</h3>  
+<p class="font-body-md text-on-surface-variant font-medium">Call us or schedule online to have an expert technician help right away.</p>  
+</div>  
+<div class="text-center bg-surface p-8 rounded-xl border border-outline-variant shadow-sm">  
+<div class="w-16 h-16 bg-primary text-on-primary rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Free On-Site Estimate</h3>  
+<p class="font-body-md text-on-surface-variant font-medium">We perform a physical inspection with absolutely no hidden fees.</p>  
+</div>  
+<div class="text-center bg-surface p-8 rounded-xl border border-outline-variant shadow-sm">  
+<div class="w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Same-Day Restoration</h3>  
+<p class="font-body-md text-on-surface-variant font-medium">Most repairs are completed flawlessly in just one single visit.&nbsp;</p>  
+</div>  
+</div>  
+</div>  
+</section>  
+<!-- Proven Results Gallery -->  
+<section class="py-20 bg-surface border-t border-outline-variant">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">  
+<div class="text-center max-w-2xl mx-auto mb-16">  
+<span class="text-primary font-label-md uppercase tracking-wider mb-3 block font-bold">Proven Results</span>  
+<h2 class="font-headline-lg text-on-surface mb-4 font-black text-4xl md:text-5xl">Real-World Transformations</h2>  
+<p class="font-body-md text-on-surface-variant font-medium">See the difference our repairs can make.</p>  
+</div>  
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">  
+<div class="rounded-xl overflow-hidden shadow-md border border-outline-variant">  
+<img alt="Track before and after" class="w-full h-80 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCruaDOwoUl05JazruI79aD48o1WnN2j3oslcselqhg4DFKaPwePwYPuGPMQkuQU93ii8ACGO4Q_WQn7NGI7DmU8WiM0JVZC9MBUE8yBkjbaomcGw4M4hgHfGR60x_Z9yJC1aRVkrGvqBNdR7v_1-Bt3bv6U2j-fnKmgvFyI2djLCIjias1aDgH2kb_Swh5E6ywAD89cdwfgjmbherMBhmnrvbs75df8-YjXKPsp1XQSXe7-6Ieaqx4-ytU54_NPOXeyPASg_K1MKo">  
+</div>  
+<div class="rounded-xl overflow-hidden shadow-md border border-outline-variant">  
+<img alt="Track damage restoration" class="w-full h-80 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoOu0mXGsMjSsGnneaFBB6JL8lt7XmPKtsIrN2fdDX6CI_gWGXnYQI5E1IFoJ_v8ALp1o8xR7eMkTSfxaBUegIPU-jT8o8aK-ByhhjkpgT_cg8s-hkb4-2atizvDdN7iKpHBfewrs1wWejtSBaFv8__dBi2l04HgQjRnoebggskXhIzfWRlhqDGmL19WFG5SuK4CHEHUBpzFjFHxqdqSVYiHeWYmWfbpppzJxXqWO6i2tkflIIQRuE1OBZzBTFyML3_IpNvf-m73I">  
+</div>  
+<div class="rounded-xl overflow-hidden shadow-md border border-outline-variant">  
+<img alt="Technician working on door" class="w-full h-80 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvxLu9SBdFHTspwI4pfhCaHCjCugy3oYctQDaS0pxd7gbg-Gv2wzFQECI5-Fq8LNx5otKdvSBzVgUX6zkLxsrMEWik4lbgn_RZ4QNjwlszzzGko7sVYW7ovrXvs-v_-8skiSqfIqvdKA_i-x0s_e2QtJ3b5yOWAmKhnrLj1xCHXBbta-z5umDS7nYrJdxdTEd5Rw0NXW_ej4Ervj1xvcR8BHTkYPgCeJr2KqE5F1qtZX2vntUoWbqXDL4d_fsPd3aSg-MU72DzcBE">  
+</div>  
+</div>  
+</div>  
+</section>  
+<!-- Home Page Reviews Section -->  
+<section class="py-20 bg-surface-container-low border-t border-outline-variant">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">  
+<div class="text-center max-w-2xl mx-auto mb-16">  
+<span class="text-primary font-label-md uppercase tracking-wider mb-3 block font-bold">What Our Customers Say</span>  
+<h2 class="font-headline-lg text-on-surface mb-4 font-black text-4xl md:text-5xl">Real Feedback From Real Clients</h2>  
+</div>  
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"We're extremely pleased with their excellent work. I recommend them 100%."</p>  
+<p class="font-label-md text-primary font-bold">— Jose Dorta</p>  
+</div>  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"Excellent service, punctual and fair price, we definitely will call them again in the future."</p>  
+<p class="font-label-md text-primary font-bold">— Lulu Rodriquez</p>  
+</div>  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"Muy profesionales. Altamente recomendado100%."</p>  
+<p class="font-label-md text-primary font-bold">— Rosie Annie</p>  
+</div>  
+</div>  
+<div class="text-center mt-12">  
+    <button class="border-2 border-primary text-primary px-8 py-3 rounded-full font-label-lg hover:bg-primary-container hover:text-on-primary-container transition-colors font-bold" onclick="navigateTo('reviews')">  
+        Read All Customer Reviews  
+    </button>  
+</div></div>  
+</section>  
+  
+</main>  
+<!-- SERVICES PAGE VIEW -->  
+<main class="page-section flex-grow bg-surface py-20" id="page-services">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">  
+<div class="text-center max-w-2xl mx-auto mb-16">  
+<span class="text-primary font-label-md uppercase tracking-wider mb-3 block font-bold">What We Do Best</span>  
+<h2 class="font-headline-lg text-on-surface mb-4 font-black text-4xl md:text-5xl">Our Specialized Solutions</h2>  
+<p class="font-body-md text-on-surface-variant font-medium">Save hundreds of dollars by extending the life of your sliidng doors and windows. Please note that we do not replace broken glass panes or impact sliding doors.</p>  
+</div>  
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">  
+<!-- Service 1 -->  
+<div class="bg-surface rounded-xl p-8 border border-outline-variant shadow-sm">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Heavy Duty Roller Replacement</h3>  
+<p class="font-body-md text-on-surface-variant mb-6 font-medium">Removal of degraded, rusted factory tandem wheels. Installation of premium stainless steel rollers.</p>  
+<ul class="space-y-2 text-on-surface-variant font-body-md list-disc list-inside font-medium">  
+<li class="">Tandem ball-bearing setups</li>  
+<li class="">High-capacity nylon wheel units</li>  
+<li class="">Corrosion-resistant metal components</li>  
+</ul>  
+</div>  
+<!-- Service 2 -->  
+<div class="bg-surface rounded-xl p-8 border border-outline-variant shadow-sm">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Track Resurfacing &amp; Alignment</h3>  
+<p class="font-body-md text-on-surface-variant mb-6 font-medium">Mechanical repair of warped, dented, or split door tracks. Installation of new steel tracks and caps for frictionless sliding door movement.</p>  
+<ul class="space-y-2 text-on-surface-variant font-body-md list-disc list-inside font-medium">  
+<li class="">Stainless steel track cap installations</li>  
+<li class="">Door realignments</li>  
+<li class="">Debris extraction and thorough cleaning</li>  
+</ul>  
+</div>  
+<!-- Service 3 -->  
+<div class="bg-surface rounded-xl p-8 border border-outline-variant shadow-sm">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Security Locks &amp; Handles</h3>  
+<p class="font-body-md text-on-surface-variant mb-6 font-medium">Upgrade worn commercial lock configurations and quality handles.</p>  
+<ul class="space-y-2 text-on-surface-variant font-body-md list-disc list-inside font-medium">  
+<li class="">Traditional residential mortise locks</li>  
+<li class="">Ergonomic replacement handles</li>  
+<li class="">Additional security options for any price point.</li>  
+</ul>  
+</div>  
+<!-- Service 4 -->  
+<div class="bg-surface rounded-xl p-8 border border-outline-variant shadow-sm">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Custom Sliding Screen Doors</h3>  
+<p class="font-body-md text-on-surface-variant mb-6 font-medium">High-quality mosquito mesh frames custom-fit to your existing patio door frame tracks.</p>  
+<ul class="space-y-2 text-on-surface-variant font-body-md list-disc list-inside font-medium">  
+<li class="">Pet-resistant mesh options</li>  
+<li class="">Heavy-duty aluminum frames</li>  
+<li class="">Smooth gliding hardware</li>  
+</ul>  
+</div>  
+<!-- Service 5 -->  
+<div class="bg-surface rounded-xl p-8 border border-outline-variant shadow-sm">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Window Balances &amp; Hardware</h3>  
+<p class="font-body-md text-on-surface-variant mb-6 font-medium">Replacement of broken window balances and springs to ensure your windows open and stay open safely.</p>  
+<ul class="space-y-2 text-on-surface-variant font-body-md list-disc list-inside font-medium">  
+<li class="">Constant force balance repair</li>  
+<li class="">Spiral balance replacement</li>  
+<li class="">Lock and latch hardware upgrades</li>  
+</ul>  
+</div>  
+<!-- Service 6 -->  
+<div class="bg-surface rounded-xl p-8 border border-outline-variant shadow-sm">  
+<h3 class="font-headline-md text-primary mb-3 font-extrabold text-2xl">Window Screen Repair &amp; Replacement</h3>  
+<p class="font-body-md text-on-surface-variant mb-6 font-medium">On-site fabrication and repair of window screens to keep pests out while letting fresh air in.</p>  
+<ul class="space-y-2 text-on-surface-variant font-body-md list-disc list-inside font-medium">  
+<li class="">Custom frame sizing</li>  
+<li class="">Quality fiberglass mesh</li>  
+<li class="">On-site installation and fitting</li>  
+</ul>  
+</div></div>  
+<!-- CTA -->  
+<div class="bg-primary text-center py-16 px-6 rounded-2xl shadow-xl">  
+<h3 class="font-headline-lg text-on-primary mb-4 font-black text-3xl md:text-4xl">Need Immediate Assistance?</h3>  
+<p class="font-body-lg text-on-primary/80 max-w-2xl mx-auto mb-8 font-medium">Most repairs are fully diagnosed, priced, and completed in under an hour during our in-person property inspection.</p>  
+<a class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-label-lg hover:bg-opacity-90 transition-colors shadow-md gap-2 font-bold" href="tel:+17862341944">  
+                    Call Now: (786) 234-1944  
+                </a>  
+</div>  
+</div>  
+</main>  
+<!-- REVIEWS PAGE VIEW -->  
+<main class="page-section flex-grow bg-surface-container-low py-20" id="page-reviews">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">  
+<div class="text-center max-w-2xl mx-auto mb-16">  
+<span class="text-primary font-label-md uppercase tracking-wider mb-3 block font-bold">Verified Customer Proof</span>  
+<h2 class="font-headline-lg text-on-surface mb-4 font-black text-4xl md:text-5xl">Real Feedback From Real Clients</h2>  
+<p class="font-body-md text-on-surface-variant font-medium">We take pride in delivering clean, prompt, and competitive patio door solutions across South Florida communities.</p>  
+</div>  
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"We're extremely pleased with their excellent work. I recommend them 100%."</p>  
+<p class="font-label-md text-primary font-bold">— Jose Dorta</p>  
+</div>  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"Excellent service, punctual and fair price, we definitely will call them again in the future."</p>  
+<p class="font-label-md text-primary font-bold">— Lulu Rodriquez</p>  
+</div>  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"Muy profesionales. Altamente recomendado100%."</p>  
+<p class="font-label-md text-primary font-bold">— Rosie Annie</p>  
+</div>  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"Amir and his team were prompt, extremely polite, and completed the track repair faster than I expected. Five stars all the way."</p>  
+<p class="font-label-md text-primary font-bold">— Mark Stevenson</p>  
+</div>  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"Honest pricing and no hard sell to replace my entire door unit. The new rollers work flawlessly, like sliding on ice."</p>  
+<p class="font-label-md text-primary font-bold">— Sarah Jenkins</p>  
+</div>  
+<div class="bg-surface border border-outline-variant p-8 rounded-xl shadow-sm">  
+<div class="flex justify-between items-start mb-4">  
+<div class="flex text-[#fcd400] text-xl tracking-widest">★★★★★</div>  
+<img alt="Google" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugU7WF1xQx5El4cNJ-Uue0Z_Fg-mKsNBO4HYB-R5mNwLIXRvInV094IOXvjlM45ClWqpLoD05U8g7EJt5wIlmOsvpgJe346MIh27qMxDvCS89tWvevr1MpTK_OiNjQ-ZSos1jegsuqZ9VzS1N0zlK9Zc45VZJrF6SwwqVZ6f-X7EA96pc9Kzzt2Ri96bFrg4XN8ZyF7LcCnLs4SkK582v-kBSqJxI2oWCgixyy4feAjSs6g8Q1gHdFo0Wc">  
+</div>  
+<p class="font-body-md text-on-surface italic mb-6 font-medium">"They replaced a broken mortise lock and fixed a jammed track alignment on the same afternoon I called. Lifesavers."</p>  
+<p class="font-label-md text-primary font-bold">— David R.</p>  
+</div>  
+</div><div class="text-center mt-12"><a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-full font-label-lg hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md gap-2 font-bold" href="https://g.page/amir-luis-sliding-doors/review?gm" target="_blank"><span class="material-symbols-outlined">open_in_new</span>Read More Reviews on Google</a></div>  
+</div>  
+</main>  
+<!-- CONTACT PAGE VIEW -->  
+<main class="page-section flex-grow bg-surface py-20" id="page-contact">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">  
+<div class="text-center max-w-2xl mx-auto mb-16">  
+<span class="text-primary font-label-md uppercase tracking-wider mb-3 block font-bold">Connect With Us</span>  
+<h2 class="font-headline-lg text-on-surface mb-4 font-black text-4xl md:text-5xl">Request Your Free Estimate Today</h2>  
+<p class="font-body-md text-on-surface-variant font-medium">Reach out now to set up your free mobile on-site diagnostic service appointment.</p>  
+</div>  
+<div class="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">  
+<div>  
+<h3 class="font-headline-md text-primary mb-4 font-extrabold text-2xl">Direct Inquiries</h3>  
+<p class="font-body-md text-on-surface-variant mb-8 font-medium">Have a question or need a repair? Give our service desk a call to coordinate immediate field dispatch.</p>  
+<div class="space-y-6">  
+<div class="flex items-start gap-4">  
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>  
+<div>  
+<h4 class="font-label-md text-on-surface font-bold">Serice Range</h4>  
+<p class="font-body-md text-on-surface-variant font-medium"></p><div class="">Cutler Bay &amp;</div><div class="">South Florida</div><p class=""></p>  
+</div>  
+</div>  
+<div class="flex items-start gap-4">  
+<span class="material-symbols-outlined text-primary mt-1">phone</span>  
+<div>  
+<h4 class="font-label-md text-on-surface font-bold">Phone Line</h4>  
+<a class="font-body-md text-primary hover:text-primary-container transition-colors font-medium font-bold" href="tel:+17862341944">(786) 234-1944</a>  
+</div>  
+</div>  
+<div class="flex items-start gap-4">  
+<span class="material-symbols-outlined text-primary mt-1">schedule</span>  
+<div>  
+<h4 class="font-label-md text-on-surface font-bold">Service Hours</h4>  
+<p class="font-body-md text-on-surface-variant font-medium">Mon - Fri: 8:00 AM - 7:00 PM</p><div class="">Sat: 8:00 AM - 4:00PM</div><p class=""></p>  
+</div>  
+</div>  
+</div>  
+<div class="mt-8 bg-secondary-container text-on-secondary-container p-4 rounded-lg font-label-md text-sm border border-[#ffe082] font-bold">  
+                        Important: We focus entirely on sliding door and window repairs. We do not offer glass replacement or impact door panel replacement.  
+                    </div>  
+</div>  
+<div class="bg-surface p-8 rounded-xl shadow-lg border border-outline-variant overflow-hidden"><div class="text-center mb-8">  
+<p class="font-body-md text-on-surface mb-3 font-medium">Having trouble with the form below?</p>  
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-full font-label-lg hover:bg-primary-container hover:text-on-primary-container transition-all shadow-md gap-2 font-bold" href="https://docs.google.com/forms/d/e/1FAIpQLSfYribSdFQ3-BNAWJrvgVrMHY3kZFeQQ5vwxaPkAIX4KTCe-w/viewform?usp=dialog" target="_blank">  
+<span class="material-symbols-outlined">open_in_new</span>  
+        Open Form in New Tab  
+    </a>  
+</div>  
+<iframe class="w-full border-0" height="800" src="https://docs.google.com/forms/d/e/1FAIpQLSfYribSdFQ3-BNAWJrvgVrMHY3kZFeQQ5vwxaPkAIX4KTCe-w/viewform?embedded=true" width="100%">Loading…</iframe></div>  
+</div>  
+</div>  
+</main>  
+<!-- Footer -->  
+<footer class="bg-[#1a1a1a] text-white border-t-4 border-primary mt-auto">  
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">  
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-b border-gray-700 pb-12">  
+<div class="md:col-span-1"><div class="flex items-center gap-3 mb-4"><img alt="Amir &amp; Luis Sliding Doors" class="w-auto object-contain h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpsz51oGJmyHN-ifTJDT7Vh5AN0OPGU-oQUrSvbqt3Eu1mgy8cBgjTbGWDwDlMBjP3crudq7ouPm8GCMh-cfPzm2R_2osSX_9wrOSm4zD1d6CujONC4oFpDcOr_dTtx0nl1Dao_OU9fA_XOnEU7JURVvx6Lpq7f0vprJmCwbb8wVf3eUpJT4nTBm9wVIpzCx6M9uslGQfQw8ppU5MFn-uOXaJYW0TcqXlwjNdMJKznY6oSC4VUQlqTm6EAzqW1t7iiAcfI5jvXEMA"><span class="font-label-lg text-white font-bold">Amir &amp; Luis <br>Sliding Doors</span></div><p class="font-body-md text-gray-400 max-w-sm font-medium">Your local choice for reliable track, roller, and lock maintenance services across all of South Florida,</p></div>  
+<div>  
+<h4 class="font-label-md uppercase tracking-wider mb-6 text-white font-bold">Navigation</h4>  
+<ul class="space-y-3 font-body-md text-gray-400 font-medium">  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('home')">Home Page</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Repair Services</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('reviews')">Customer Proof</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('contact')">Book On-site Quote</a></li>  
+</ul>  
+</div>  
+<div>  
+<h4 class="font-label-md uppercase tracking-wider mb-6 text-white font-bold">Our Services</h4>  
+<ul class="space-y-3 font-body-md text-gray-400 font-medium"><li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Roller Replacements</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Sliding Door Track Rail</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Lock Mechanisms</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Patio Door Alignments</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Screen Doors</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Window Balances</a></li>  
+<li class=""><a class="cursor-pointer hover:text-primary transition-colors" onclick="navigateTo('services')">Window Screens</a></li></ul>  
+</div>  
+<div>  
+<h4 class="font-label-md uppercase tracking-wider mb-6 text-white font-bold">Contact Info</h4>  
+<ul class="space-y-3 font-body-md text-gray-400 font-medium">  
+<li class="">Cutler Bay, FL</li>  
+<li class=""><a class="hover:text-primary transition-colors font-bold text-white" href="tel:+17862341944">(786) 234-1944</a></li>  
+<li class="">Mon-Sat: 8AM - 6PM</li>  
+</ul>  
+</div>  
+</div>  
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400 font-body-md font-medium">  
+<p class="">© 2026 Amir &amp; Luis Sliding Doors. All rights reserved. Note: We do not handle structural impact doors or glass replacements.</p>  
+</div>  
+</div>  
+</footer>  
+<script>  
+        function navigateTo(sectionId) {  
+            const sections = document.querySelectorAll('.page-section');  
+            sections.forEach(section => {  
+                section.classList.remove('active-section');  
+            });  
+  
+            const targetSection = document.getElementById('page-' + sectionId);  
+            if (targetSection) {  
+                targetSection.classList.add('active-section');  
+            }  
+  
+            const navLinks = document.querySelectorAll('nav a[id^="nav-"]');  
+            navLinks.forEach(link => {  
+                link.classList.remove('text-primary');  
+                link.classList.add('text-on-surface-variant');  
+            });  
+  
+            const activeLink = document.getElementById('nav-' + sectionId);  
+            if (activeLink) {  
+                activeLink.classList.add('text-primary');  
+                activeLink.classList.remove('text-on-surface-variant');  
+            }  
+  
+            window.scrollTo({ top: 0, behavior: 'smooth' });  
+        }  
+  
+        function handleFormSubmit(event) {  
+            event.preventDefault();  
+            alert('Thank you for reaching out to Amir & Luis! We have received your booking inquiry and a technician will call you shortly to confirm your estimate appointment.');  
+            event.target.reset();  
+            navigateTo('home');  
+        }  
+    </script>  
+  
+  
+  
+  
+</body></html>  
